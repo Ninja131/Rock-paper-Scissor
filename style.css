@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --paraText: "IBM Plex Sans";
+    --Heading: "DynaPuff";
+    --background:#180800;
+    --textlite:#18080089;
+    --primary:#ea5b14;
+    --card2:#ffe6d9;
+    --card:#fff5f0;
+
+}
+
+body{
+    background-color: var(--background);
+    font-family: "DynaPuff", "IBM Plex Sans";
+}
+
+.container{
+    height: 450px;
+    width: 450px;
+    background-color: var(--card);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.2s;
+    overflow: hidden;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .app_title{
+    text-align: center;
+    font-size: 32px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.weapon_box , .choices{
+    height: 120px;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-top: 0px;
+    font-family: var(--paraText);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    position: relative;
+
+
+}
+.hide{
+    display: none;
+}
+
+.container .weapon_box .weapons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+}
+
+.container .weapon_box .weapons div{
+    background-color: var(--primary);
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s;
+
+}
+.container .weapon_box .weapons div:hover{
+     background-color: #a63c06;
+}
+
+
+.container .weapon_box div img{
+    height: 70%;
+}
+
+.container .score_box{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--card2);
+    padding: 24px 0px;
+    border-radius: 8px;
+
+}
+.score_box div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.score_box span{
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+.gameImgWrapper{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    /* border:2px solid red; */
+}
+
+.gameImgWrapper .player_choice{
+      /* background-color: #1f1922; */
+      height: 100px;
+      /* transform: rotate(0); */
+      position: absolute;
+      left: -120px;
+      transition: all 0.2s;
+
+    }
+
+.gameImgWrapper .Computer_choice{
+      /* background-color: #1f1922; */
+      height: 100px;
+      /* transform: rotate(90deg); */
+       position: absolute;
+       right: -120px;
+      transition: all 0.2s;
+}
+
+
+.gameImgWrapper img{
+    height: 100%;
+
+}
+
+.gameImgWrapper .ComputerImg{
+     transform: scalex(-1);
+}
+
+.gameImgWrapper .player_choice.active{
+    /* border: 2px solid red; */
+    left: 50px;
+    animation: player .8s linear infinite;
+    animation-delay: .5s;
+
+}
+@keyframes player{
+   0%{
+    transform: rotate(-90deg);
+   }50%{
+    transform: rotate(0deg);
+   }100%{
+    transform: rotate(-90deg);
+   }}
+
+.gameImgWrapper .Computer_choice.active{
+    /* border: 2px solid red; */
+    right: 50px;
+   
+    animation: computer .8s linear infinite;
+      animation-delay: .5s;
+}
+
+@keyframes computer{
+   0%{
+    transform: rotate(90deg);
+   }50%{
+    transform: rotate(0deg);
+   }100%{
+    transform: rotate(90deg);
+   }}
+
+
+   .btn{
+    margin: 0px auto;
+    margin-top: 24px;
+    background-color: var(--primary);
+    color: #fff;
+    font-family: var(--Heading);
+    padding: 16px 24px;
+    border: none;
+    border-radius: 8px;
+    /* display: none; */
+
+   }
+   .btn:hover{
+    background-color: #a63c06;
+   }
+
+
+
+
+   .weapon_box h3, .choices h3{
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    color: var(--textlite);
+   }
+

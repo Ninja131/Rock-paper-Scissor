@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="app_title">Rock Paper Scissor</h1>
+        <!-- add hide here -->
+        <div class="weapon_box ">
+            <h3>Select your Wepon</h3>
+            <div class="weapons">
+                <div class="Rock"><img src="rock.png" alt="" srcset=""></div>
+                 <div class="Paper"><img src="paper.png" alt="" srcset=""></div>
+                  <div class="Scissor"><img src="scissors.png" alt="" srcset=""></div>
+            </div>
+        </div>
+         <!-- add hide here -->
+        <div class="choices hide">
+            <h3>player <span>v/s</span> Computer</h3>
+            <div class="gameImgWrapper">
+                   <div class="player_choice"><img class="PlayerImg" src="rock.png" alt="" srcset=""></div>
+                   <div class="Computer_choice"><img class="ComputerImg" src="rock.png" alt="" srcset=""></div>
+
+            </div>
+        </div>
+        <button class="btn hide" onclick="PlayAgain()">Play Again</button>
+       
+        <div class="score_box">
+            <div class="Win">Won: <span>0</span></div>
+            <div class="Loose">Loose: <span>0</span></div>
+            <div class="Draw">Draw: <span>0</span></div>
+        </div>
+        
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
